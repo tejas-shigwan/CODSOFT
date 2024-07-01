@@ -1,89 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title>My portfolio</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles can be placed here */
+    </style>
 </head>
-<body>
-    <header id="header">
-        <div class="container">
-            <h1>Tejas Shigwan</h1>
-            <p>Web Developer</p>
-        </div>
-    </header>
+<body class="w3-black">
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <img src="My photo.png" alt="Tejas Shigwan">
-            <p>Hello! I'm Tejas Shigwan, an IT engineer passionate about web development, software engineering, and user-centric design. With a solid foundation in HTML, CSS, JavaScript, SQL, and proficiency in tools like Figma, I thrive in creating intuitive digital experiences and solving complex technical challenges.</p>
-        </div>
-    </section>
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="bw.jpg" style="width:100%">
+  
+  <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PROJECTS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>Figma</li>
-            </ul>
-        </div>
-    </section>
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#home" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>AI ChatBot</h3>
-                <p>The project aims to develop an interactive AI application using Streamlit, integrating Google's Gemini AI model for two main functionalities: Vision Application and Q&A Chat Application.
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Tejas Shigwan.</h1>
+    <p> Web Developer & UI Designer.</p>
+    <img src="bw.jpg" alt="boy" class="w3-image" width="992" height="1108">
+  </header>
 
-                    Key Components:
-                    
-                    Streamlit: Utilized for building a user-friendly web interface, allowing easy interaction with the AI models.
-                    
-                    Gemini AI: A state-of-the-art AI model employed for generating human-like text responses based on input prompts.
-                    
-                    Functionality:
-                    
-                    Vision Application: Users can input prompts and upload images, with Gemini AI generating descriptive responses based on both the prompt and the content of the image.
-                    
-                    Q&A Chat Application: Users can ask questions in natural language, and Gemini AI provides human-like responses, simulating conversational interaction.</p>
-                <img src="Chatbot.png" alt="Project 1">
-            </div>
-            <div class="project">
-                <h3>IPL Win Probability Predictor</h3>
-                <p>This project aims to predict IPL match outcomes using Machine Learning algorithms by analyzing and preprocessing historical IPL datasets. Key variables such as team names and overs will be extracted and used as inputs to train predictive models. By leveraging these models, the study seeks to provide insights into the probable outcome of future IPL matches based on past data analysis.</p>
-                <img src="https://private-user-images.githubusercontent.com/132420876/239447996-a3363cd9-84ba-45b3-bafb-e4e34be6bbfc.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTkyODgxODAsIm5iZiI6MTcxOTI4Nzg4MCwicGF0aCI6Ii8xMzI0MjA4NzYvMjM5NDQ3OTk2LWEzMzYzY2Q5LTg0YmEtNDViMy1iYWZiLWU0ZTM0YmU2YmJmYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjI1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYyNVQwMzU4MDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02YzgzMDUyNWEzNGU1NzRhYWMwNzllODUwNDg2NDU2M2MwNzIzNjlmZWMxNTllYjcyMTljNjQzZWI2MDc0YTAwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.wkuPF1MHVlwfd8NOzxqUb2MGaxNyfaYdqKXRwmobD0w" alt="Project 2">
-            </div>
-        </div>
-    </section>
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">My Name</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>As an IT engineer fresher, I bring a versatile skill set and a solid foundation in various technologies. My expertise includes Python, HTML, CSS, JavaScript, SQL, and Figma. I am proficient in writing clean, efficient Python code for automation, data analysis, and web development. My skills in HTML and CSS allow me to create and style responsive web pages with a focus on user experience. With my knowledge of JavaScript, I can add interactivity to web applications, enhancing user engagement.
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <p class="w3-wide">Python</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">HTML</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">CSS & JavaScript</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:75%"></div>
+    </div>
+    <p class="w3-wide">Figma</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:90%"></div>
+    </div>
+    <br>
+    
+    <div class="w3-row w3-center w3-padding-11 w3-section w3-light-grey">
+      <div class="w1-quarter w3-section">
+        <span class="w3-xlarge">3+</span><br>
+        Projects Done
+      </div>
+      
+    </div>
 
-    <section id="resume">
-        <div class="container">
-            <h2>Resume</h2>
-            <p>Download my <a href="Tejas's Resume.pdf" target="_blank">resume</a>.</p>
-        </div>
-    </section>
+    <a href="Tejas's Resume.pdf" download class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+    </a>
+    
+    
+    </div>
+  </div>
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Projects</h2>
+    <hr style="width:200px" class="w3-opacity">
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: tejasshigwan13@gmail.com</p>
-            <p>Phone: +91-7045801112</p>
-            
-            
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <div class="portfolio-item">
+          <a href="https://github.com/tejas-shigwan/AI_Chatbot_ChatGPT" target="_blank">
+            <img src="195.jpg" style="width:100%" alt="Intelligent ChatBot">
+            <div class="portfolio-item-title">Intelligent ChatBot</div>
+          </a>
         </div>
-    </section>
+    
+        <div class="portfolio-item">
+          <a href="https://github.com/tejas-shigwan/IPL-Win-Probabitliy-Predictor" target="_blank">
+            <img src="cricket.jpeg" style="width:100%" alt="IPL win Predictor">
+            <div class="portfolio-item-title">IPL win Predictor</div>
+          </a>
+        </div>
+    
+        <div class="portfolio-item">
+          <a href="https://www.behance.net/gallery/201394019/Parallelization-Design-Crafting-Fluid-Visual" target="_blank">
+            <img src="para.jpg" style="width:100%" alt="Parallelization Design Crafting Fluid Visual">
+            <div class="portfolio-item-title">Parallelization Design Crafting Fluid Visual</div>
+          </a>
+        </div>
+      </div>
+    
+      <div class="w3-half">
+        <div class="portfolio-item">
+          <a href="https://www.behance.net/gallery/201470379/TripEase-Your-Travel-Assistant" target="_blank">
+            <img src="trvel.jpg" style="width:100%" alt="TripEase: Your Travel Assistant">
+            <div class="portfolio-item-title">TripEase: Your Travel Assistant</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
 
-    <footer id="footer">
-        <div class="container">
-            <p>&copy; 2024 Tejas Shigwan. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Mumbai, India</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +91-7045801112</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: tejasshigwa@mail.com</p>
+    </div><br>
+    <p>Let's get in touch. Send me a message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+
+<script>
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
 </body>
 </html>
